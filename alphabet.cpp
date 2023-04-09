@@ -32,7 +32,7 @@ int main()
     while (getline(stream, line))
     {
         int prev = 0, pos;
-        while ((pos = line.find_first_of(" `~!@#$%^&*()_+-Ñ=[]{}|;:'<,>.?/\\\"", prev)) != string::npos)
+        while ((pos = line.find_first_of(" `~!@#$%^&*()_+-=[]{}|;:'<,>.?/\\\"", prev)) != string::npos)
         {
             if (pos > prev)
                 words.push_back(line.substr(prev, pos - prev));
